@@ -484,6 +484,10 @@ nav .fas{
         margin-bottom: 30px;
     }
 
+    .about-col-2{
+        margin-left: -40px;
+    }
+
     .contact-left, .contact-right{
         flex-basis: 100%;
     }
