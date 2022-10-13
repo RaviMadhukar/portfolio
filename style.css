@@ -27,10 +27,15 @@ body{
 }
 
 nav{
+    position: fixed;
+    background: black;
     display: flex;
     text-align: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    z-index: 2;
+    width: 90%;
+    border-radius: 5px;
 }
 
 .pogo{
@@ -173,6 +178,10 @@ nav ul li a:hover::after{
     padding: 30px 0;
 }
 
+.services-list .fa-sharp{
+   color: orangered;
+}
+
 .services-list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px ,1fr));
@@ -189,6 +198,10 @@ nav ul li a:hover::after{
     transition: background 0.5s, transform 0.5s;
 }
 
+.services-list p{
+   font-size: 20px;
+}
+
 .services-list div i{
     font-size: 70px;
     margin-bottom: 30px;
@@ -202,7 +215,7 @@ nav ul li a:hover::after{
 
 .services-list div a{
     text-decoration: none;
-    color: #fff;
+    color: lightblue;
     font-size: 20px;
     margin-top: 20px;
     display: inline-block;
@@ -405,10 +418,12 @@ nav .fas{
     nav .fas{
         display: block;
         font-size: 40px;
+        color: lightblue;
     }
 
     .header-text{
-        margin-top: 100%;
+        color: orange;
+        margin-top: 70%;
         font-size: 25px;
     }
 
@@ -417,31 +432,44 @@ nav .fas{
     }
 
     .header-text h1 span{
+        color: orangered;
         font-size: 60px;
     }
 
+    nav{
+        height: 60px;
+    }
+
     nav ul{
-        background:  rgb(255, 136, 0);
+        background: lightblue;
+        border: 5px solid orange;
+        border-radius: 8px;
         position: fixed;
-        top: 0;
-        right: -250px;
-        width: 250px;
-        height: 100vh;
-        padding-top: 50px;
+        margin-right: 23px;
+        top: 75px;
+        right: -253px;
+        width: 230px;
+        height: 35vh;
+        padding-top: 20px;
         z-index: 2;
         transition: right 0.5s;
     }
 
     nav ul li{
+        color: black;
         display: block;
-        margin: 25px;
     }
 
-    nav ul .fas{
+    nav .fas {
+        display: none;
         position: absolute;
-        top: 25px;
-        left: 25px;
+        right: 0;
+        margin:10px 25px;
         cursor: pointer;
+    }
+
+    nav .fas.active-bar{
+        display: block;
     }
 
     .sub-title{
